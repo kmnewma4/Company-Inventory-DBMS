@@ -11,7 +11,8 @@
 }
 body {
   background: linear-gradient(to right, #a9f1df, #ffbbbb);
-  font-family: "Inter UI", sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
 }
@@ -70,6 +71,16 @@ body {
   padding-top: 15%;
 }
 
+.google {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  bottom: 40px; /* Stick to the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  border-radius: 100px;
+}
+
 .right {
   background: #d1d7d4;
   box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
@@ -122,7 +133,7 @@ input::-moz-focus-inner {
 
 #submit {
   color: #000000;
-  margin-top: 40px;
+  margin-top: 20px;
   transition: color 300ms;
 }
 
