@@ -1,4 +1,4 @@
-@import url("https://rsms.me/inter/inter-ui.css");
+@import url("https://fonts.cdnfonts.com/css/audrey");
 
 ::selection {
   background: #2d2f36;
@@ -10,9 +10,8 @@
   background: #2d2f36;
 }
 body {
-  background: linear-gradient(to right, #a9f1df, #ffbbbb);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Audrey", sans-serif;
+
   margin: 0;
   padding: 20px;
 }
