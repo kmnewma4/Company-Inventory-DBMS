@@ -1,0 +1,91 @@
+/* Dashboard.css */
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  .btn-info,
+.btn-signup,
+.btn-about {
+  color: black;
+}
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-buttons a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Main content styles */
+  .dashboard-page {
+    font-family: "Audrey", sans-serif;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* Bottom section styles */
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .btn-view-files {
+    background-color: #333;
+  }
+  
+  .btn-signup {
+    
+    background-color: #fe90af;
+  }
+  
+  .btn-add-inventory {
+    background-color: black;
+  }
+  
