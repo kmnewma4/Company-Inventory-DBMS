@@ -1,27 +1,32 @@
 import React from "react";
 import "../assets/LoginPage.css";
 import { GoogleLogin } from "@react-oauth/google";
+import { Link } from "react-router-dom";
+import HomePage from "./HomePage";
 
 const LoginPage = () => {
   return (
-    <div class="page">
-      <div class="container">
-        <div class="left">
-          <div class="login">Login</div>
+    <div className="page">
+      <div className="container">
+        <div className="left">
+          <div className="login">Login</div>
         </div>
-        <div class="right">
-          <div class="form">
-            <label for="email">Email</label>
+        <div className="right">
+          <div className="form">
+            <label htmlFor="email">Email</label>
             <input type="email" id="email" />
-            <label for="password">Password</label>
+            <label htmlFor="password">Password</label>
             <input type="password" id="password" />
-            <input type="submit" id="submit" value="Submit" />
+            <Link to = {HomePage}>
+            <button type = "submit" id = "submit"> SUBMIT </button>
+            </Link>
           </div>
           <div className="google">
             <GoogleLogin />
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

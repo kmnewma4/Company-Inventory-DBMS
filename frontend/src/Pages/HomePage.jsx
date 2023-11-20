@@ -1,23 +1,28 @@
-// Navbar.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./../assets/HomePage.css";
 
 const HomePage = () => {
-  // Generate table rows and columns
+  const [companies, setCompanies] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from your backend API
+    fetch("http://localhost:3000/companies") // Replace with your actual backend API endpoint
+      .then((response) => response.json())
+      .then((data) => setCompanies(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  // Generate table rows and columns based on fetched data
   const generateTable = () => {
-    const rows = [];
-    for (let i = 1; i <= 10; i++) {
-      rows.push(
-        <tr key={i}>
-          <td>Company {i}</td>
-          <td>Data 1</td>
-          <td>Data 2</td>
-          <td>Data 3</td>
-          <td>Data 4</td>
-        </tr>
-      );
-    }
-    return rows;
+    return companies.map((company) => (
+      <tr key={company.company_id}>
+        <td>{company.company_id}</td>
+        <td>{company.company_name}</td>
+        <td>{company.address}</td>
+        <td>{company.contact}</td>
+        <td>Data 4</td>
+      </tr>
+    ));
   };
 
   return (
@@ -27,7 +32,7 @@ const HomePage = () => {
           <tr>
             <th>Company ID</th>
             <th>Company Name</th>
-            <th> Address</th>
+            <th>Address</th>
             <th>Contact</th>
             <th>Header 5</th>
           </tr>
